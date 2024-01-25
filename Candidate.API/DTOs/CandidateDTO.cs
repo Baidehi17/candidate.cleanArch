@@ -1,12 +1,10 @@
-﻿using System;
-namespace Candidate.Domain
+﻿namespace Candidate.API.DTO
 {
-    public class Candidate
+    public class CandidateDTO
     {
         public int Id { get; set; }
         public string Name { get; set; }
         public int Age { get; set; }
-        public string Location { get; set; }
         public string Email { get; set; }
     }
 }

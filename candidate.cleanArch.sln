@@ -9,13 +9,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{015A47EB-E76A-4D43-B3B5-7B3AEE5A7743}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candidate.Domain", "Candidate.Domain\Candidate.Domain.csproj", "{A7A734AF-93EF-47C3-A931-E8706FED4DE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Candidate.Domain", "Candidate.Domain\Candidate.Domain.csproj", "{A7A734AF-93EF-47C3-A931-E8706FED4DE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candidate.API", "Candidate.API\Candidate.API.csproj", "{EC84B0BD-D0F9-47D8-B211-4CC5BDFE0E6F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Candidate.API", "Candidate.API\Candidate.API.csproj", "{EC84B0BD-D0F9-47D8-B211-4CC5BDFE0E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candidate.Infrastructure", "Candidate.Infrastructure\Candidate.Infrastructure.csproj", "{51CF0A35-6AF4-4390-BA2D-3617E85F02F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Candidate.Infrastructure", "Candidate.Infrastructure\Candidate.Infrastructure.csproj", "{51CF0A35-6AF4-4390-BA2D-3617E85F02F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Candidate.Application", "Candidate.App\Candidate.Application.csproj", "{A2666986-B6BB-44F6-9708-E0EAA8EDDA8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Candidate.Application", "Candidate.App\Candidate.Application.csproj", "{A2666986-B6BB-44F6-9708-E0EAA8EDDA8B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

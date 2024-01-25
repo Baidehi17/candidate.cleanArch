@@ -1,7 +1,8 @@
-
-using Candidate.App;
-using Candidate.Application;
+using Candidate.Application.Implementation;
+using Candidate.Application.Interface;
 using Candidate.Infrastructure;
+using Candidate.Infrastructure.Dbcontext;
+using Microsoft.EntityFrameworkCore;
 
 namespace Candidate.API
 {
@@ -18,25 +19,24 @@ namespace Candidate.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddScoped<ICandidateRepository, CandidateRepository>();
-            builder.Services.AddScoped<ICandidateService, CandidateService>();
+            builder.Services.AddDbContext<CandidateDbContext>(options
+               => options.UseSqlServer(builder.Configuration.GetConnectionString("candidateDB")));
+
+            builder.Services.AddTransient<ICandidateRepository, CandidateRepository>();
+            builder.Services.AddTransient<ICandidateService, CandidateService>();
 
             var app = builder.Build();
 
-            // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
+                app.ExceptionHandling();
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
 
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
-
             app.Run();
         }
     }
