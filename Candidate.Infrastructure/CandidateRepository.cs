@@ -16,7 +16,7 @@ namespace Candidate.Infrastructure
         }
         public async Task AddCandidate(Domain.Candidate candidate)
         {
-            await dbContext.AddAsync(candidate);
+            await dbContext.candidates.AddAsync(candidate);
             await dbContext.SaveChangesAsync();
         }
 
@@ -45,10 +45,10 @@ namespace Candidate.Infrastructure
 
         public async Task UpdateCandidate(Domain.Candidate candidate)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
 
-            //dbContext.candidates.Update(candidate);
-            //await dbContext.SaveChangesAsync();
+            dbContext.candidates.Update(candidate);
+            await dbContext.SaveChangesAsync();
         }
     }
 }
